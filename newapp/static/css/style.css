@@ -1,4 +1,4 @@
-/* VALGUS INDUSTRIAL CORE - 2026 */
+
 
 :root {
   --bg: #f8eedf;
@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV */
+
 .side-nav {
   position: absolute;
   top: 40px;
@@ -45,9 +45,11 @@ body {
 
 .side-nav a:hover { transform: translateX(-10px); color: var(--accent); }
 
-/* HERO */
-.hero-section { padding: 40px 0 0 40px; }
-.logo-img { width: 160px; filter: brightness(0); transition: 0.3s; }
+
+.hero-section { padding: 40px 0 0 40px;  min-height: 15vh; }
+.logo-img { width: 160px; filter: brightness(0); transition: 0.3s; display: block;
+  height: auto;
+  margin: 0 auto; }
 .dark-mode .logo-img { filter: brightness(0) invert(1); }
 
 .main-title {
@@ -58,7 +60,6 @@ body {
   letter-spacing: -2px;
 }
 
-/* INDUSTRIAL BLOCKS */
 .industrial-block {
   display: flex;
   align-items: center;
@@ -92,11 +93,11 @@ body {
 .geometric-frame:hover img { filter: grayscale(0); transform: scale(1.05); }
 
 .content-overlay { flex: 1; max-width: 500px; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
+.text-right { text-align: right; padding-right: 100px;}
+.text-left { text-align: left; padding-left: 100px; }
 
-.block-heading { font-family: 'Bebas Neue', sans-serif; font-size: 4.5rem; line-height: 1; margin-bottom: 20px; }
-.block-desc { font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; opacity: 0.8; }
+.block-heading { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; line-height: 1; margin-bottom: 20px; }
+.block-desc { font-size: 1.5rem; line-height: 1.6; margin-bottom: 30px; opacity: 0.8; }
 
 .industrial-link {
   font-family: 'Bebas Neue', sans-serif;
@@ -108,7 +109,7 @@ body {
 
 .industrial-link:hover { letter-spacing: 2px; }
 
-/* FOOTER */
+
 .industrial-footer {
   border-top: var(--border-width) solid currentColor;
   padding: 80px 5%;
@@ -139,19 +140,19 @@ body {
 .contact-details .label { display: block; font-family: 'Bebas Neue', sans-serif; opacity: 0.4; letter-spacing: 1px; }
 .detail { font-size: 1.8rem; font-weight: 600; text-decoration: none; color: inherit; display: block; margin-bottom: 20px; }
 
-/* CONTACT HOVER EFFECTS */
+
 .contact-details .detail {
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease;
-  display: inline-block; /* Required for transform to work */
-  width: 100%; /* Ensures the link takes up the full line */
+  display: inline-block; 
+  width: 100%; 
 }
 
 .contact-details .detail:hover {
-  color: var(--accent); /* Uses your #ff4d4d red */
-  transform: translateX(10px); /* Subtle industrial 'slide' */
+  color: var(--accent); 
+  transform: translateX(10px);
 }
 
-/* Optional: Subtle pulse on the label when hovering the detail below it */
+
 .contact-details .detail:hover + .label {
   opacity: 1;
 }
@@ -224,7 +225,7 @@ body {
     margin-left: 15px; 
   }
   .contact-grid { 
-    grid-template-columns: 1fr; /* Stacks the contact info */
+    grid-template-columns: 1fr; 
   }
   .social-list { 
     text-align: left; 
@@ -239,4 +240,17 @@ body {
     left: 0; 
     margin-top: 30px; 
   }
+  .hero-section {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .detail { 
+    font-size: 1 rem; 
+    font-weight: 600; 
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    margin-bottom: 20px; }
 }
