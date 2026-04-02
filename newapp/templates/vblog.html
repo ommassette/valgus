@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valgus</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS (local) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Bootstrap Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+      <link rel="shortcut icon" href="{% static 'images/VALGUS.png' %}" type="image/x-icon">
+</head>
+<body>
+     <section class="about-page-hero">
+  <div class="container py-5">
+    <div class="about-content-center">
+      <h1 class="about-bg-text-center">REDUCTIONIST</h1>
+      
+      <div class="about-description-overlay">
+        <h2 class="service-title">ABOUT VALGUS</h2>
+        <p class="service-lead">Evolutionary Utility. Biological Basis. Zero Fluff.</p>
+        <p class="service-text">
+          Valgus Creative Studio was founded on the principle of reductionism. We strip away the unnecessary noise 
+          of modern design to focus on what actually works logic, structure, and survival in a competitive market. 
+          Whether we are engineering code or crafting a visual identity, our goal is to provide tools that offer 
+          a distinct evolutionary advantage to your business.
+        </p>
+        
+        <div class="stat-row mt-5">
+          <div class="stat-item">
+            <span class="stat-num">21</span>
+            <span class="stat-label">GENS OF LOGIC</span>
+          </div>
+          <div class="stat-item border-left-right">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">FUNCTIONAL</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">0</span>
+            <span class="stat-label">WASTED PIXELS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section alt-bg">
+  <div class="container py-5">
+      <div class="pill-buttons">
+          <a href="{%url 'my_index' %}" class="pill-btn">HOME</a>
+          <a href="{%url 'my_services' %}" class="pill-btn">SERVICES</a>
+        </div>
+    <div class="d-flex justify-content-between align-items-end mb-5">
+      <div>
+        <h2 class="service-title mb-0">THE LOG</h2>
+        <p class="service-lead">Logic & Industry Updates</p>
+      </div>
+      <a href="#" class="rect-link">VIEW ALL POSTS</a>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="blog-card">
+          <div class="blog-img-wrapper">
+            <img src="{% static 'images/WEB.jpg' %}" alt="Logic in Design">
+            <span class="blog-date">02.04.26</span>
+          </div>
+          <h3 class="blog-title">The Valgus Log: Entry 001</h3>
+          <p class="blog-excerpt">At Valgus, we strip away the noise to build at the intersection of logic and evolution.</p>
+          <a href="{%url 'my_blogs' %}" class="blog-link">READ LOG -></a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card">
+          <div class="blog-img-wrapper">
+            <img src="{% static 'images/APPPS.jpg' %}" alt="Brutalist Architecture">
+            <span class="blog-date">28.03.26</span>
+          </div>
+          <h3 class="blog-title">Brutalism in Modern Web</h3>
+          <p class="blog-excerpt">How unadorned engineering and concrete-inspired layouts are reclaiming the internet from "soft" design.</p>
+          <a href="#" class="blog-link">READ LOG -></a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card">
+          <div class="blog-img-wrapper">
+            <img src="{% static 'images/la.jpg' %}" alt="Clean Code">
+            <span class="blog-date">15.03.26</span>
+          </div>
+          <h3 class="blog-title">Code as an Organism</h3>
+          <p class="blog-excerpt">Treating your codebase as a living system that must evolve or face technical debt extinction.</p>
+          <a href="#" class="blog-link">READ LOG -></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<button class="btn btn-outline-dark toggle-btn" onclick="toggleMode()">
+  Theme
+</button>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

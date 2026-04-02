@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valgus</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS (local) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Bootstrap Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/VALGUS.png' %}" type="image/x-icon">
+</head>
+<body>
+<body>
+<div class="main-wrapper">
+    <div class="side-nav">
+        <a href="/">HOME</a>
+        <a href="{% url 'my_services' %}">SERVICES</a>
+        <a href="{% url 'my_vblog' %}">ABOUT & BLOG</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+    <div class="container hero-section">
+        <div class="row">
+            <div class="col-12 text-start">
+                <img src="{% static 'images/valgus2.png' %}" class="logo-img">
+            </div>
+        </div>
+    </div> 
+  
+    <div class="container-fluid"> 
+        <div class="row">
+            <div class="col-12 text-start p-0"> 
+                <h1 class="main-title">VALGUS <br> CREATIVE STUDIO</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-wrapper">
+        <div class="floating-rect">
+            <img src="{% static 'images/POSTERS.jpg' %}" alt="Featured">
+        </div>
+        <div class="rect-text-group">
+            <h2 class="sub-heading">Build Better</h2>
+            <p class="sub-paragraph">
+                We build high-performance, mobile-first web applications and custom management systems designed for long-term evolutionary utility. 
+            </p>
+            <a href="{% url 'my_services' %}" class="rect-link">LEARN MORE ></a>
+        </div>
+    </div>
+
+    <div class="secondary-hero-wrapper">
+        <div class="left-group-wrapper">
+            <div class="left-text-block">
+                <h2 class="highlight-heading">Craft Visuals</h2>
+                <p class="sub-paragraph">
+                    We create bold, minimalist visual identities that strip away the noise to focus on impactful, professional communication. 
+                </p>
+                <a href="{% url 'my_services' %}" class="rect-link">VIEW ALL SERVICES ></a>
+            </div>
+            <div class="side-rect">
+                <img src="{% static 'images/OFFICE.jpg' %}" alt="Services">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-section" id="contact">
+    <div class="contact-grid w-100"> <div class="contact-form-column">
+            <div class="pill-buttons">
+                <a href="/" class="pill-btn">HOME</a>
+                <a href="{% url 'my_vblog' %}" class="pill-btn">ABOUT</a>
+                <a href="{% url 'my_vblog' %}" class="pill-btn">LOG</a>
+            </div>
+            
+            <div class="contact-info text-start">
+                <div class="info-item">
+                    <p class="info-label">EMAIL</p>
+                    <a href="mailto:valguscreative@gmail.com" class="info-link">
+                        <p class="info-detail">valguscreative@gmail.com</p>
+                    </a>
+                    <a href="mailto:valguscreative@proton.me" class="info-link">
+                        <p class="info-detail">valguscreative@proton.me</p>
+                    </a>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">PHONE</p>
+                    <a href="tel:+254740402400" class="info-link">
+                        <p class="info-detail">+254 740 402 400</p>
+                    </a>
+                    <a href="tel:+254740402400" class="info-link">
+                        <p class="info-detail">+254 757 429 400</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-side-column">
+            <div class="social-list">
+                <a href="https://www.instagram.com/valguscreative/">INSTAGRAM</a>
+                <a href="https://wa.me/254740402400">WHATSAPP</a>
+                <a href="https://github.com/ommassette">GITHUB</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-footer-group">
+        <h2 class="contact-huge-text">CONTACT US</h2>
+        <div class="contact-icons">
+            <img src="{% static 'images/pen.svg' %}" alt="PS">
+            <img src="{% static 'images/pencil.svg' %}" alt="AI">
+            <img src="{% static 'images/boot.svg' %}" alt="VS">
+            <img src="{% static 'images/next.svg' %}" alt="PY">
+        </div>
+        <a href="https://wa.me/254740402400" class="rect-button-point">LETS TALK</a>
+    </div>
+</div>
+
+<button class="btn btn-outline-dark toggle-btn" onclick="toggleMode()">
+  Theme
+</button>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

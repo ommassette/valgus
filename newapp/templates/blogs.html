@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valgus</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS (local) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Bootstrap Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+      <link rel="shortcut icon" href="{% static 'images/VALGUS.png' %}" type="image/x-icon">
+</head>
+<body>
+    <header class="main-wrapper">
+    <nav class="side-nav">
+        <a href="{%url 'my_index' %}">HOME</a>
+        <a href="{%url 'my_services' %}">SERVICES</a>
+        <a href="{%url 'my_services' %}">ABOUT</a>
+        <a href="{%url 'my_index' %}">CONTACT</a>
+    </nav>
+
+    <div class="hero-section px-4">
+        <div class="logo-group">
+            <img src="{% static 'images/VALGUS.png' %}" alt="Valgus Logo" class="logo-img">
+        </div>
+    </div>
+</header>
+
+<main class="blog-post-container">
+    <div class="container">
+        <div class="post-header-group">
+            <p class="post-metadata">LOG ENTRY // 001 // 02.04.26</p>
+            <h1 class="main-title-post">THE VALGUS<br>PROTOCOL</h1>
+            <div class="post-tags">
+                <span class="tag-pill">REDUCTIONISM</span>
+                <span class="tag-pill">ENGINEERING</span>
+                <span class="tag-pill">STRATEGY</span>
+            </div>
+        </div>
+
+        <div class="post-featured-image-wrapper">
+            <img src="{% static 'images/WEBS.jpg' %}" alt="Valgus Workspace" class="featured-img">
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <article class="post-content">
+                    <p class="lead-text">
+                        At Valgus Creative Studio, we believe creativity is the engine that drives innovation. 
+                        We're not just designers or developers we're builders of experiences and problem-solvers through technology.
+                    </p>
+
+                    <h2 class="section-subheading">DESIGNED FOR UTILITY</h2>
+                    <p>
+                        Our work lives at the intersection of design and development. We craft striking graphic identities that make brands unforgettable, 
+                        designing modern, responsive websites that don't just look good they perform. 
+                    </p>
+
+                    <blockquote>
+                        "Valgus is more than a creative studio; it’s a collaborative space for thinkers and innovators who embrace bold, logical evolution."
+                    </blockquote>
+
+                    <p>
+                        Photography inspires our perspective; digital art fuels our imagination. Every project is an opportunity to blend logic with 
+                        creativity and structure with style. We don't just create for today; we design and build for what's next.
+                    </p>
+                </article>
+
+                <div class="post-footer-nav mt-5">
+                    <a href="{%url 'my_vblog' %}" class="rect-button-point">BACK TO LOG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <button class="btn btn-outline-dark toggle-btn" onclick="toggleMode()">
+  Theme
+</button>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>
