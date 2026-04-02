@@ -392,11 +392,11 @@ body {
 
 .contact-huge-text {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 15rem;
+  font-size: clamp(4rem, 12vw, 14rem);
   line-height: 0.8;
   margin: 0;
   margin-left: -10px;
-  letter-spacing: -5px;
+  letter-spacing: -6px;
   white-space: nowrap;
 }
 
@@ -645,14 +645,6 @@ body {
   border-top-color: rgba(255,255,255,0.1);
 }
 
-.contact-huge-text {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 13rem;
-  line-height: 0.8;
-  margin: 0;
-  letter-spacing: -5px;
-  white-space: nowrap;
-}
 
 .contact-icons {
   display: flex;
