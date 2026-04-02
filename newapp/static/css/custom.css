@@ -1160,6 +1160,13 @@ blockquote {
     padding: 20px;
     transform: none;
   }
+    .info-detail { 
+    font-size: 1.3rem; 
+    font-weight: 600; 
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    margin-bottom: 20px; }
 }
 
 /* 4. SMOOTH SCROLLING FOR LOGIC FLOW */
