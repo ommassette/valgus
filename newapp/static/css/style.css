@@ -412,3 +412,34 @@ width: 100%;
     text-transform: uppercase;
     background: rgba(255, 255, 255, 0.03);
 }
+
+@media (max-width: 768px) {
+  .side-nav {
+    position: absolute; /* Puts it back on top of the content */
+    top: 20px;         /* Minimal gap from the very top */
+    right: 20px;       /* Minimal gap from the right edge */
+    text-align: right;
+    padding: 0;        /* Remove padding that creates extra space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;          /* Tighten the gap between links */
+    z-index: 1001;
+  }
+
+  .side-nav a {
+    font-size: 1.2rem; /* Keep it sharp and industrial */
+    line-height: 1.2;
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+  }
+
+  /* Ensure the title doesn't get smothered by the nav */
+  .main-title { 
+    margin-top: 80px; /* Adjust this so VALGUS starts below the nav area */
+    margin-left: 20px;
+    transform: none; 
+  }
+}

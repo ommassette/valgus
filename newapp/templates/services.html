@@ -261,32 +261,59 @@
             <p class="service-lead">Selected Works & Visual Experiments</p>
         </div>
         
-        <div class="valgus-grid">
+        <div class="valgus-grid mb-5">
             <div class="grid-item">
                 <img src="{% static 'images/nganya2.png' %}" alt="Work 1">
-                <div class="grid-overlay">
-                    <span>POSTER_DESIGN BY PAUL // 01</span>
-                </div>
+                <div class="grid-overlay"><span>POSTER_DESIGN BY PAUL // 01</span></div>
             </div>
             <div class="grid-item">
                 <img src="{% static 'images/skele.png' %}" alt="Work 2">
-                <div class="grid-overlay">
-                    <span>POSTER_DESIGN BY PAUL// 02</span>
-                </div>
+                <div class="grid-overlay"><span>POSTER_DESIGN BY PAUL // 02</span></div>
             </div>
             <div class="grid-item">
                 <img src="{% static 'images/nganya.png' %}" alt="Work 3">
-                <div class="grid-overlay">
-                    <span>POSTER_DESIGN BY PAUL// 03</span>
-                </div>
+                <div class="grid-overlay"><span>POSTER_DESIGN BY PAUL // 03</span></div>
             </div>
-            <div class="grid-item">
-                <img src="{% static 'images/khali.png' %}" alt="Work 4">
-                <div class="grid-overlay">
-                    <span>POSTER_DESIGN BY PAUL// 04</span>
+            
+            <div class="grid-item-container">
+                <div class="d-flex justify-content-end mb-2">
+                    <a href="{% url 'member_blog' name='paul' %}" class="paul-credit-link">
+    MORE_BY_PAUL <span class="blink">↗</span>
+</a>
+                </div>
+                <div class="grid-item">
+                    <img src="{% static 'images/khali.png' %}" alt="Work 4">
+                    <div class="grid-overlay"><span>POSTER_DESIGN BY PAUL // 04</span></div>
                 </div>
             </div>
         </div>
+
+        <div class="valgus-grid">
+            <div class="grid-item">
+                <img src="{% static 'images/lolo1.png' %}" alt="New Work 1">
+                <div class="grid-overlay"><span>PHOTOS_BY_LOVIS // 01</span></div>
+            </div>
+              <div class="grid-item">
+                <img src="{% static 'images/lolo2.png' %}" alt="New Work 1">
+                <div class="grid-overlay"><span>PHOTOS_BY_LOVIS // 02</span></div>
+            </div>
+              <div class="grid-item">
+                <img src="{% static 'images/lolo4.png' %}" alt="New Work 1">
+                <div class="grid-overlay"><span>PHOTOS_BY_LOVIS // 03</span></div>
+            </div>
+              <div class="grid-item-container">
+                <div class="d-flex justify-content-end mb-2">
+                    <a href="{% url 'member_blog' name='lovis' %}" class="paul-credit-link">
+    MORE_BY_LOVIS <span class="blink">↗</span>
+</a>
+                </div>
+                <div class="grid-item">
+                    <img src="{% static 'images/lolo5.png' %}" alt="Work 4">
+                    <div class="grid-overlay"><span>PHOTOS_BY_LOVIS // 04</span></div>
+                </div>
+            </div>
+            </div>
+        
     </div>
 </section>
 

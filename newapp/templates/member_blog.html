@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ display_name }} | Valgus Archive</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        /* Injecting the dynamic accent color into your existing variable system */
+        :root { --accent: {{ color|default:"#ff4d4d" }}; }
+        
+        .blog-wrapper { padding-top: 100px; }
+        .bio-text { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; line-height: 1.8; opacity: 0.9; }
+        .meta-label { font-family: 'Bebas Neue', sans-serif; opacity: 0.4; letter-spacing: 2px; display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body class="dark-mode"> <div class="main-wrapper blog-wrapper">
+    <nav class="side-nav">
+        <a href="/">INDEX</a>
+        <a href="{% url 'my_services' %}">SERVICES</a>
+    </nav>
+
+    <section class="title-container"> 
+        <h1 class="main-title" style="color: var(--accent);">{{ display_name }}</h1>
+        <p class="block-desc" style="margin-left: 40px; text-transform: uppercase; letter-spacing: 5px;">
+            NODE_TYPE // {{ role }}
+        </p>
+    </section>
+
+    <div class="industrial-block">
+        <div class="geometric-frame frame-left" style="height: 500px;">
+            <img src="{% static 'images/' %}{{ profile_image }}" alt="{{ display_name }}">
+        </div>
+        
+        <div class="content-overlay text-right">
+            <span class="meta-label">CREATIVE_DOSSIER_v2.6</span>
+            <h2 class="block-heading">BIO <br> REPORT</h2>
+            <div class="bio-text">
+                {{ bio|linebreaks }}
+            </div>
+            <br>
+            <a href="/" class="industrial-link">RETURN TO SYSTEM —</a>
+        </div>
+    </div>
+</div>
+
+<footer class="industrial-footer">
+    <div class="footer-base">
+        <h2 class="huge-footer-text" style="font-size: 8vw;">VALGUS_ARCHIVE</h2>
+        <div class="contact-icons">
+            <img src="{% static 'images/pen.svg' %}" alt="Icon">
+            <img src="{% static 'images/boot.svg' %}" alt="Icon">
+        </div>
+    </div>
+</footer>
+
+<button class="theme-toggle" onclick="document.body.classList.toggle('dark-mode')">THEME</button>
+
+<script>
+    // Optional: This keeps the theme consistent if they toggled it on the index page
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+    
+    // Update the button to save the preference
+    const btn = document.querySelector('.theme-toggle');
+    btn.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+
+</body>
+</html>
