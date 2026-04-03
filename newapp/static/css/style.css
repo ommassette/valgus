@@ -206,6 +206,35 @@ body {
   cursor: pointer;
   z-index: 1000;
 }
+.contact-icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.contact-icons img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.2);
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.contact-icons img:hover {
+  filter: grayscale(0) contrast(1);
+  opacity: 1;
+  transform: translateY(-10px) scale(1.1);
+}
+
+.dark-mode .contact-icons img {
+  filter: grayscale(1) brightness(0.8) invert(1);
+}
+
+.dark-mode .contact-icons img:hover {
+  filter: grayscale(0) brightness(1) invert(0);
+}
 
 @media (max-width: 900px) {
   .industrial-block, .block-reverse { flex-direction: column; text-align: left !important; }
