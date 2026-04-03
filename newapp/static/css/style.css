@@ -275,11 +275,33 @@ width: 100%;
     font-size: 1.5rem;
 }
 
-/* Ensure mobile stacking for shop cards */
 @media (max-width: 768px) {
     .shop-grid-container {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-grid-container {
+        padding: 40px 15px; 
+        gap: 25px; 
+    }
+
+    .shop-card {
+        max-width: 100%; 
+    }
+
+    .geometric-frame {
+        height: 220px; 
+    }
+
+    .shop-card-content {
+        padding: 20px; 
+    }
+
+    .block-heading {
+        font-size: 1.8rem;
     }
 }
 
