@@ -36,11 +36,11 @@
 
     <div class="industrial-block">
         <div class="geometric-frame frame-left" style="height: 500px;">
-            <img src="{% static 'images/' %}{{ profile_image }}" alt="{{ display_name }}">
+            <img src="{% static image_path %}" alt="{{ display_name }}">
         </div>
         
         <div class="content-overlay text-right">
-            <span class="meta-label">CREATIVE_DOSSIER_v2.6</span>
+            <span class="meta-label">DOSSIER_v2.6</span>
             <h2 class="block-heading">BIO <br> REPORT</h2>
             <div class="bio-text">
                 {{ bio|linebreaks }}

@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Contact
+from .models import Contact, Creative
 
-# Register your models here.
-admin.site.register(Contact)
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'subject', 'created_at')
+
+@admin.register(Creative)
+class CreativeAdmin(admin.ModelAdmin):
+    list_display = ('display_name', 'role', 'profile_image_filename')
