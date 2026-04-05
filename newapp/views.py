@@ -1,16 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import Contact
-from .models import Creative
-
-
-def index(request):
-    return render(request,'index.html')
-def services(request):
-    return render(request,'services.html')
-def vblog(request):
-    return render(request,'vblog.html')
-def blogs(request):
-    return render(request,'blogs.html')
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Contact, Creative, Vblog, blog
 
 def index(request):
     if request.method == "POST":
@@ -34,22 +23,12 @@ def services(request):
         return redirect('my_services')
     return render(request, 'services.html')
 
-
 def vblog(request):
-    if request.method == "POST":
-        Contact.objects.create(
-            name=request.POST.get('name'),
-            email=request.POST.get('email'),
-            subject=request.POST.get('subject'),
-            message=request.POST.get('message')
-        )
-        return redirect('my_vblog') 
-    return render(request, 'vblog.html')
+    blogs_data = Vblog.objects.all()
+    return render(request, 'vblog.html', {'blogs': blogs_data})
 
 def member_blog(request, name):
-    from django.shortcuts import get_object_or_404
     creative = get_object_or_404(Creative, name__iexact=name)
-    
     context = {
         'display_name': creative.display_name,
         'role': creative.role,
@@ -58,3 +37,12 @@ def member_blog(request, name):
         'bio': creative.bio,
     }
     return render(request, 'member_blog.html', context)
+
+def blogs(request):
+    return render(request, 'blogs.html', {'posts': blog.objects.all()})
+
+def blog_list(request):
+    return render(request, 'blogs.html', {'posts': blog.objects.all()})
+
+def blog_detail(request, pk):
+    return render(request, 'blogs.html', {'post': get_object_or_404(blog, pk=pk)})
