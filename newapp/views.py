@@ -28,15 +28,8 @@ def vblog(request):
     return render(request, 'vblog.html', {'blogs': blogs_data})
 
 def member_blog(request, name):
-    creative = get_object_or_404(Creative, name__iexact=name)
-    context = {
-        'display_name': creative.display_name,
-        'role': creative.role,
-        'color': creative.color,
-        'image_path': f"images/{creative.profile_image_filename}",
-        'bio': creative.bio,
-    }
-    return render(request, 'member_blog.html', context)
+    creative, created = Creative.objects.get_or_create(name__iexact=name, defaults={'name': name, 'display_name': name.capitalize(), 'role': 'Team Member', 'profile_image_filename': 'default.jpg', 'bio': 'Bio pending.'})
+    return render(request, 'member_blog.html', {'display_name': creative.display_name, 'role': creative.role, 'color': creative.color, 'image_path': f"images/{creative.profile_image_filename}", 'bio': creative.bio})
 
 def blogs(request):
     return render(request, 'blogs.html', {'posts': blog.objects.all()})
